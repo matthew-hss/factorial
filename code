@@ -1,8 +1,11 @@
 public static long factorial(int num) {
+        long result = 1;
         if(num == 0) {
             return 1;
         }
         else {
-            return num * factorial(num - 1);
+            for(int i = 2; i <= num; i++) {
+                result *= i;
+            }
+            return result;
         }
-    }
